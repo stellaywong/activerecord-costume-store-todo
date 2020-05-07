@@ -6,9 +6,9 @@ class CreateCostumeStores < ActiveRecord::Migration[4.2]
             t.string :location
             t.integer :costume_inventory
             t.integer :num_of_employees
-            t.boolean :still_in_business
-            t.datetime :opening_time
-            t.datetime :closing_time
+            t.boolean :still_in_business    # boolean makes it true/false
+            t.datetime :opening_time        # rake db:migrate migrates all migrations at once
+            t.datetime :closing_time        # rake db:rollback rolls back 1 migration at a time, from most recent
         end
     end
 end

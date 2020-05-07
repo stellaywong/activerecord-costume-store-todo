@@ -3,6 +3,45 @@ require_relative 'spec_helper'
 describe "Costume" do
 
   it "has a name" do
+    # binding.pry
+    # bundle exec rspec
+    # in order to use the equivalent of rails console :)
+    # because there's not enough of rails in this project. it's focused on activerecord
+
+    # try costume1 = Costume.new
+      # => #<Costume:0x00007f84c40ffd70
+      # id: nil,
+      # name: nil,
+      # price: nil,
+      # image_url: nil,
+      # size: nil,
+      # created_at: nil,
+      # updated_at: nil>
+    # set costume1.name = "this"
+    # set costume1.price = 2
+    # costume1.save
+
+    # try costume2 = Costume.create (which is new + save, so you get an id + timestamps off the bat)
+      #  id: 2,
+      #  name: nil,
+      #  price: nil,
+      #  image_url: nil,
+      #  size: nil,
+      #  created_at: 2020-05-07 16:57:30 UTC,
+      #  updated_at: 2020-05-07 16:57:30 UTC>
+    # or costume2 = Costume.create(name: "costume2", price: 7)
+    # try costume2.update(price: 77)
+ 
+    # try Costume.find_by(:name => "costume1") or Costume.find_by(name: "costume1")
+    # try Costume.find(#) (the number must be the id #)
+    # try Costume.first
+    # try Costume.second
+    # try Costume.last
+
+    # try testcostume = Costume.first
+    # set testcostume.size = 20
+
+
     hot_dog = Costume.create(
       name: "Unisex Adult Hot Dog Costume"
     )
